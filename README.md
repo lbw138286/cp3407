@@ -9,9 +9,9 @@ The Smart Expense Tracker Web Application helps users manage personal finances b
 
 | Student Name | Role |
 |---|---|
-| Student 1 | Project Manager & Frontend Developer |
-| Student 2 | Backend Developer |
-| Student 3 | Database Designer & Tester |
+| Student 1 Zhu Zhiwei| Project Manager & Frontend Developer |
+| Student 2 Jiang Jinsong| Backend Developer |
+| Student 3 Fu Yuzhe| Database Designer & Tester |
 
 ---
 
@@ -67,4 +67,4 @@ The Smart Expense Tracker Web Application helps users manage personal finances b
 # GitHub Repository
 
 GitHub Link:
-https://github.com/your-team-name/smart-expense-tracker
+[https://github.com/your-team-name/smart-expense-tracker](https://github.com/lbw138286/cp3407/edit/main/README.md)
