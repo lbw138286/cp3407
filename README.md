@@ -9,9 +9,9 @@ The Smart Expense Tracker Web Application helps users manage personal finances b
 
 | Student Name | Role |
 |---|---|
-| Student 1 Zhu Zhiwei| Project Manager & Frontend Developer |
-| Student 2 Jiang Jinsong| Backend Developer |
-| Student 3 Fu Yuzhe| Database Designer & Tester |
+| Zhu Zhiwei| Project Manager & Frontend Developer |
+| Jiang Jinsong| Backend Developer |
+| Fu Yuzhe| Database Designer & Tester |
 
 ---
 
