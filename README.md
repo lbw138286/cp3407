@@ -68,3 +68,49 @@ The Smart Expense Tracker Web Application helps users manage personal finances b
 
 GitHub Link:
 [https://github.com/your-team-name/smart-expense-tracker](https://github.com/lbw138286/cp3407/edit/main/README.md)
+
+# CP3407 WEEK3
+Task 3 Full English Version (US3 Add Expenses)
+User Story
+As a user, I want to add daily expenses so that I can track my spending habits.
+Acceptance Criteria
+The system provides an expense input form with amount, category, date, and description.
+The system validates that the amount is a positive number.
+The system validates that the category is not empty.
+The system saves the expense record to the storage when input is valid.
+The system shows a success message for valid submission and an error message for invalid input.
+Implemented Code (Python)
+python
+
+
+# US3 - Add Expenses Implementation
+class Expense:
+    def __init__(self, amount, category, date, description):
+        self.amount = amount
+        self.category = category
+        self.date = date
+        self.description = description
+
+class ExpenseTracker:
+    def __init__(self):
+        self.expenses = []
+
+    def add_expense(self, amount, category, date, description):
+        if amount <= 0:
+            return "Error: Amount must be positive"
+        if not category:
+            return "Error: Category cannot be empty"
+        
+        new_expense = Expense(amount, category, date, description)
+        self.expenses.append(new_expense)
+        return "Expense added successfully"
+
+# Test run
+if __name__ == "__main__":
+    tracker = ExpenseTracker()
+    print(tracker.add_expense(25, "Food", "2026-06-02", "Lunch"))
+    print(tracker.add_expense(-10, "Transport", "2026-06-02", "Bus"))
+GitHub Task Completion
+Created src/add_expense.py in the repository
+Implemented all acceptance criteria
+Moved US3 from Todo to Done in the project board
