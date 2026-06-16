@@ -1,0 +1,4 @@
+0e210ae (HEAD -> master) docs: document github tracking and pull request workflow
+b074062 docs: add class and sequence diagrams
+7a88cfa feat: confirm expense management implementation
+89fd075 docs: add practical 4 task breakdown and estimates
