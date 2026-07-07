@@ -1,3 +1,0 @@
-# Practical 6 Final Summary
-
-Today I completed Practical 6: Iteration 2 for the Smart Expense Tracker Web Application. I reviewed Iteration 1, calculated the actual velocity as 4 story-days, checked the current class and code structure against SRP and DRY, and updated the burn down rate graph for Iteration 1. Based on the Iteration 1 velocity, I adjusted the Iteration 2 backlog and selected US5 Categorize Expenses and US6 Set Monthly Budgets as the main planned work. I also created an Iteration 2 task board using Todo, In Progress, and Done labels, documented completed and unfinished user stories, and prepared GitHub Pages content for the completed US3 and US4 user stories.
