@@ -1,0 +1,23 @@
+✔ US3-TC01 adds a valid expense with a new expenseId (1.981584ms)
+✔ US3-TC02 rejects an expense with zero or negative amount (0.393003ms)
+✔ US3-TC03 rejects an expense with missing required fields (0.263718ms)
+✔ US4-TC01 edits an existing expense record (0.191719ms)
+✔ US4-TC02 deletes an existing expense record (0.154493ms)
+✔ US4-TC03 shows an error when editing or deleting a missing record (0.212561ms)
+✔ US5-TC01 filters expenses by category (0.22507ms)
+✔ US5-TC02 summarizes total spending by category (0.161995ms)
+✔ US5-TC03 rejects an expense with an invalid category (0.469349ms)
+✔ US6-TC01 creates a valid monthly budget (0.505754ms)
+✔ US6-TC02 rejects invalid monthly budget values (0.262366ms)
+✔ US6-TC03 calculates monthly spending for the selected month only (0.588349ms)
+✔ US7-TC01 returns safe status when spending is below 80 percent of budget (0.21876ms)
+✔ US7-TC02 returns warning status when spending reaches at least 80 percent of budget (0.148684ms)
+✔ US7-TC03 returns over-budget status when spending exceeds budget limit (0.113282ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 112.669633

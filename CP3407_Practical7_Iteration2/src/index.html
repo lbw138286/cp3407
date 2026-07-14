@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Expense Tracker - Practical 7</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Smart Expense Tracker Web Application</h1>
+    <p class="subtitle">Practical 7 - Iteration 2 TDD Demo</p>
+    <section class="card">
+      <h2>Add Expense</h2>
+      <form id="expenseForm">
+        <input id="title" placeholder="Title" required />
+        <input id="amount" type="number" step="0.01" placeholder="Amount" required />
+        <select id="category" required>
+          <option value="">Select category</option>
+          <option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Business</option><option>Education</option><option>Other</option>
+        </select>
+        <input id="date" type="date" required />
+        <button type="submit">Add Expense</button>
+      </form>
+      <p id="message" class="message"></p>
+    </section>
+    <section class="card">
+      <h2>Monthly Budget</h2>
+      <input id="budgetLimit" type="number" step="0.01" placeholder="Monthly budget limit" />
+      <button id="setBudgetBtn">Set Budget</button>
+      <p id="budgetStatus" class="message"></p>
+    </section>
+    <section class="card">
+      <h2>Expense Records</h2>
+      <label>Filter by category:
+        <select id="categoryFilter">
+          <option value="">All</option>
+          <option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Business</option><option>Education</option><option>Other</option>
+        </select>
+      </label>
+      <table>
+        <thead><tr><th>Title</th><th>Amount</th><th>Category</th><th>Date</th></tr></thead>
+        <tbody id="expenseTableBody"></tbody>
+      </table>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "cp3407-practical7-smart-expense-tracker",
+  "version": "1.0.0",
+  "description": "Practical 7 Iteration 2 - Test-driven development evidence for Smart Expense Tracker Web Application",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "CP3407",
+    "TDD",
+    "Smart Expense Tracker",
+    "Iteration 2"
+  ],
+  "author": "Student Team",
+  "license": "UNLICENSED"
+}
