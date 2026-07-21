@@ -1,0 +1,86 @@
+
+> cp3407-practical8-smart-expense-tracker@1.0.0 test
+> node --test
+
+TAP version 13
+# Subtest: US7-TC01 shows safe budget status when spending is below the warning threshold
+ok 1 - US7-TC01 shows safe budget status when spending is below the warning threshold
+  ---
+  duration_ms: 1.319155
+  type: 'test'
+  ...
+# Subtest: US7-TC02 shows warning budget status when spending reaches 80 percent of the limit
+ok 2 - US7-TC02 shows warning budget status when spending reaches 80 percent of the limit
+  ---
+  duration_ms: 0.130886
+  type: 'test'
+  ...
+# Subtest: US7-TC03 shows over-budget status when spending exceeds the monthly limit
+ok 3 - US7-TC03 shows over-budget status when spending exceeds the monthly limit
+  ---
+  duration_ms: 0.156499
+  type: 'test'
+  ...
+# Subtest: US8-TC01 generates a monthly report for the selected month only
+ok 4 - US8-TC01 generates a monthly report for the selected month only
+  ---
+  duration_ms: 0.206141
+  type: 'test'
+  ...
+# Subtest: US8-TC02 calculates spending totals by category in the monthly report
+ok 5 - US8-TC02 calculates spending totals by category in the monthly report
+  ---
+  duration_ms: 0.567313
+  type: 'test'
+  ...
+# Subtest: US8-TC03 identifies the highest spending category in the monthly report
+ok 6 - US8-TC03 identifies the highest spending category in the monthly report
+  ---
+  duration_ms: 0.203773
+  type: 'test'
+  ...
+# Subtest: US9-TC01 detects an increasing spending trend
+ok 7 - US9-TC01 detects an increasing spending trend
+  ---
+  duration_ms: 0.24575
+  type: 'test'
+  ...
+# Subtest: US9-TC02 detects a decreasing spending trend
+ok 8 - US9-TC02 detects a decreasing spending trend
+  ---
+  duration_ms: 0.128516
+  type: 'test'
+  ...
+# Subtest: US9-TC03 handles insufficient spending trend data
+ok 9 - US9-TC03 handles insufficient spending trend data
+  ---
+  duration_ms: 0.537975
+  type: 'test'
+  ...
+# Subtest: US10-TC01 logs in successfully with a mock authentication repository
+ok 10 - US10-TC01 logs in successfully with a mock authentication repository
+  ---
+  duration_ms: 0.792417
+  type: 'test'
+  ...
+# Subtest: US10-TC02 rejects an incorrect password using a mock authentication repository
+ok 11 - US10-TC02 rejects an incorrect password using a mock authentication repository
+  ---
+  duration_ms: 0.767295
+  type: 'test'
+  ...
+# Subtest: US10-TC03 validates login input before calling the authentication repository
+ok 12 - US10-TC03 validates login input before calling the authentication repository
+  ---
+  duration_ms: 0.181468
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 117.601535
