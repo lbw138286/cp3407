@@ -1,0 +1,19 @@
+{
+  "name": "cp3407-practical9-bug-tracking-smart-expense-tracker",
+  "version": "1.0.0",
+  "description": "Practical 9 Iteration 3 - Bug/Error tracking, GitHub issue workflow, and Week 10 system testing plan for Smart Expense Tracker Web Application",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "CP3407",
+    "Bug Tracking",
+    "System Testing",
+    "GitHub Issues",
+    "Smart Expense Tracker",
+    "Iteration 3"
+  ],
+  "author": "Student Team",
+  "license": "UNLICENSED"
+}
