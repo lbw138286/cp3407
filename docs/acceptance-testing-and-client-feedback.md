@@ -16,7 +16,7 @@ External feedback cannot be invented before a real reviewer supplies it. The app
 |---|---|---|---|
 | 1 | Lecturer/client | To be recorded during review | |
 | 2 | Lecturer/client | To be recorded during review | |
-| 3 | Lecturer/client | To be recorded during final demo | |
+| 3 | Dasheng LIU | Changes required | Data presentation was too complex and should be made more user-friendly. |
 
 ## SQLite Persistence Verification
 
@@ -37,7 +37,8 @@ SQLite-02-server-restarted.png and SQLite-03-data-after-restart.png
 - Reviewer: Dasheng LIU
 - Features demonstrated: US1-US10
 - Automated test result: 41 passed, 0 failed
-- Outcome: [Accepted / Accepted with minor changes / Changes required]
-- Reviewer comments: [Exact feedback received]
-- Actions taken: [Changes completed after the feedback, if any]
-- Evidence: Acceptance-Iteration3-Lecturer-Feedback.png
+- Outcome: Changes required
+- Reviewer comments: The lecturer stated that the current data presentation was too complex and was not convenient for users to read and understand. The monthly report and spending trend results were mainly displayed as raw JSON data. Although the calculations were correct, the presentation was more suitable for developers than normal users.
+- Actions taken: The lecturer feedback was recorded and the data-presentation usability issue was documented.
+- Planned improvement: Replace or supplement the raw JSON output with clearer summary cards, formatted tables and spending-trend charts. Currency values and trend directions should be displayed using simple and readable labels.
+- Evidence: `docs/evidence/Acceptance-Iteration3-Lecturer-Feedback.png`
