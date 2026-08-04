@@ -161,3 +161,13 @@ test("US9-TC04 sorts unordered month totals before trend comparison (BUG-003 reg
   assert.equal(trend.direction, "increasing");
   assert.equal(trend.change, 70);
 });
+
+test("US9-TC05 rounds decimal spending trend change to two decimal places", () => {
+  const trend = analyzeSpendingTrend([
+    { month: "2026-07", total: 0.10 },
+    { month: "2026-08", total: 0.14 }
+  ]);
+
+  assert.equal(trend.direction, "increasing");
+  assert.equal(trend.change, 0.04);
+});
