@@ -44,3 +44,29 @@ summary cards, formatted tables and graphical charts.
 
 ## Conclusion
 The package resolves the earlier database, authentication, administration, trend-sorting, documentation-consistency, test and tooling deficiencies. Remaining actions are external account operations: invite the lecturer, deploy publicly.
+
+## Lecturer Feedback and Usability Improvement
+
+During the final demonstration, the lecturer stated that the report and
+spending trend data presentation was too complex for normal users.
+
+In response, the report interface was redesigned so that raw JSON is no longer
+the primary presentation method. The final interface now includes summary
+cards, formatted expense tables, category progress bars, monthly comparison
+bars and clear insufficient-data guidance. Raw JSON remains available only as
+optional technical evidence.
+
+The improvement was implemented through Pull Request #34 and published in
+release v1.0.1.
+
+## Testing Results
+
+The final automated test suite contains 41 tests covering US1-US10, SQLite
+integration, authentication, expense management, budgets, reports, spending
+trends, administrator functions and regression defects.
+
+Final result:
+
+- Tests: 41
+- Passed: 41
+- Failed: 0
