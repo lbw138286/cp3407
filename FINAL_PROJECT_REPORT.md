@@ -19,16 +19,28 @@ Passwords use a random salt and Node.js scrypt hash. Plain passwords are never p
 US1 registration; US2 secure login; US3 add expense; US4 edit/delete; US5 categorise/filter; US6 monthly budget; US7 alerts; US8 monthly report; US9 spending trends; US10 administrator account management. Final statuses and evidence are in `docs/completed-vs-unfinished-user-stories.md`.
 
 ## Testing and defects
-The test command is `npm test`. The package contains the original 27 unit/mock tests, one BUG-003 regression test, and 12 database/API integration tests, for a total of 40 passing tests. The final system test result is 15 pass, 0 conditional and 0 fail. All recorded defects are closed.
+The test command is `npm test`. The current automated test suite contains
+41 passing tests, including unit tests, mock-object tests, database/API
+integration tests and regression coverage for BUG-003 and US9 decimal
+precision. The final system test result is 15 pass, 0 conditional and
+0 fail. All recorded defects are closed.
 
 ## Tools and version control
-The project uses HTML, CSS, JavaScript, Node.js 22, Node's built-in test runner, Node's SQLite API, Docker, GitHub Actions, GitHub issue forms and pull-request templates. A local Git repository with meaningful final integration commits is included; it must be pushed to the team's real GitHub repository for live evidence.
+The project uses HTML, CSS, JavaScript, Node.js 22, Node's built-in test
+runner, Node's SQLite API, Docker and GitHub Actions. The complete repository
+has been pushed to GitHub. Live evidence includes issues, feature and bug-fix
+branches, pull requests, automated CI checks, teammate reviews and merged
+commits.
 
 ## Deployment
 `npm start` provides a production-style local demo at port 3000. Docker deployment is supported. A public cloud URL requires a repository/cloud account and cannot be created from the submitted ZIP alone. GitHub Pages should host documentation, while the application must use a Node.js-capable host.
 
 ## Acceptance and feedback
-Internal technical acceptance is complete. The application includes an administrator feedback form that writes real lecturer/client feedback to the relational database. External feedback must be recorded during the real demo and must not be fabricated.
+Internal technical acceptance is complete. During the final demonstration,
+the lecturer stated that the raw JSON presentation used for reports and
+spending trends was too complex for normal users. The acceptance outcome was
+Changes required. A future usability improvement has been documented to use
+summary cards, formatted tables and graphical charts.
 
 ## Conclusion
-The package resolves the earlier database, authentication, administration, trend-sorting, documentation-consistency, test and tooling deficiencies. Remaining actions are external account operations: push to GitHub, create live project/issue/PR evidence, invite the lecturer, deploy publicly and record genuine reviewer feedback.
+The package resolves the earlier database, authentication, administration, trend-sorting, documentation-consistency, test and tooling deficiencies. Remaining actions are external account operations: invite the lecturer, deploy publicly.
