@@ -1,0 +1,4 @@
+.git
+node_modules
+data/*.sqlite*
+CP3407_Final_Project_Report.docx

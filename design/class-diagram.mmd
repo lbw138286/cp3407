@@ -1,0 +1,15 @@
+classDiagram
+  class User { +int userId +String name +String email +String role +String status +register() +login() +logout() }
+  class Expense { +int expenseId +String title +decimal amount +String category +Date date }
+  class ExpenseTracker { +addExpense() +editExpense() +deleteExpense() +filterByCategory() }
+  class Budget { +String month +decimal monthlyLimit +checkStatus() }
+  class ReportService { +generateMonthlyReport() +analyzeSpendingTrend() }
+  class AuthService { +hashPassword() +verifyPassword() +createSession() }
+  class Database { +users +sessions +expenses +monthly_budgets }
+  User "1" --> "0..*" Expense : owns
+  User "1" --> "0..*" Budget : sets
+  ExpenseTracker --> Expense : manages
+  ExpenseTracker --> Budget : checks
+  ExpenseTracker --> ReportService : uses
+  AuthService --> Database : persists accounts and sessions
+  ExpenseTracker --> Database : persists expenses and budgets
