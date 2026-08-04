@@ -11,4 +11,8 @@
 | Agile | three iterations, velocity, burndown, boards, reflections, bugs | Complete |
 | Technical writing | report, user-story pages, design/testing/tool documentation | Complete |
 
-External evidence still requiring repository-owner access: public deployment URL, live GitHub Project/Issues/PRs, lecturer collaborator invitation, and real lecturer/client feedback.
+Items requiring private-account verification:
+- Lecturer collaborator access
+- GitHub Project final board state
+- Public application deployment, if required
+- Published GitHub Pages site, if required
