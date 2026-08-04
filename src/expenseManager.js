@@ -224,7 +224,7 @@ export function analyzeSpendingTrend(monthlyTotals) {
   );
   const first = Number(orderedTotals[0].total);
   const last = Number(orderedTotals[orderedTotals.length - 1].total);
-  const change = last - first;
+  const change = Number((last - first).toFixed(2));
 
   if (change > 0) {
     return { direction: "increasing", change, message: "Spending is increasing." };
