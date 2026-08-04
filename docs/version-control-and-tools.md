@@ -25,8 +25,29 @@ Run tests:
 npm test
 ```
 
-Run the demo by opening:
+Run the final application from the project root:
+
+```bash
+npm test
+npm start
+```
+
+Then open:
 
 ```text
-src/index.html
+http://127.0.0.1:3000
 ```
+
+The application must be accessed through the Node.js server because it uses the backend API and SQLite relational database.
+
+## Final Code Review Workflow
+
+The final project used GitHub Issues, feature branches, Pull Requests and
+GitHub Actions for change control.
+
+- PR #27 fixed the US9 spending trend decimal precision issue.
+- PR #29 updated the final automated test count from 40 to 41.
+- GitHub Actions ran the Node.js test suite for push and pull request events.
+- The final automated test result was 41 passed and 0 failed.
+- A separate teammate review was requested before merging the final
+  documentation review update.
