@@ -1,0 +1,254 @@
+
+> cp3407-smart-expense-tracker-complete@2.0.0 test
+> node --no-warnings --test tests/*.test.js
+
+TAP version 13
+# Subtest: US1 registration creates a database user and never stores the raw password
+ok 1 - US1 registration creates a database user and never stores the raw password
+  ---
+  duration_ms: 158.496886
+  type: 'test'
+  ...
+# Subtest: US1 duplicate email registration is rejected
+ok 2 - US1 duplicate email registration is rejected
+  ---
+  duration_ms: 12.536136
+  type: 'test'
+  ...
+# Subtest: US2 secure login returns a session token
+ok 3 - US2 secure login returns a session token
+  ---
+  duration_ms: 63.58955
+  type: 'test'
+  ...
+# Subtest: US2 wrong password is rejected
+ok 4 - US2 wrong password is rejected
+  ---
+  duration_ms: 58.430119
+  type: 'test'
+  ...
+# Subtest: US3 authenticated user can add an expense
+ok 5 - US3 authenticated user can add an expense
+  ---
+  duration_ms: 13.153283
+  type: 'test'
+  ...
+# Subtest: US4 user can edit and delete only their own expense
+ok 6 - US4 user can edit and delete only their own expense
+  ---
+  duration_ms: 14.693957
+  type: 'test'
+  ...
+# Subtest: US5 category filter returns only matching expenses
+ok 7 - US5 category filter returns only matching expenses
+  ---
+  duration_ms: 18.251454
+  type: 'test'
+  ...
+# Subtest: US6 monthly budget is persisted in the relational database
+ok 8 - US6 monthly budget is persisted in the relational database
+  ---
+  duration_ms: 5.977346
+  type: 'test'
+  ...
+# Subtest: US7 budget warning is calculated from database expenses
+ok 9 - US7 budget warning is calculated from database expenses
+  ---
+  duration_ms: 3.641777
+  type: 'test'
+  ...
+# Subtest: US8 monthly report excludes expenses from another month
+ok 10 - US8 monthly report excludes expenses from another month
+  ---
+  duration_ms: 8.843988
+  type: 'test'
+  ...
+# Subtest: US9 spending trend sorts unordered month data before analysis
+ok 11 - US9 spending trend sorts unordered month data before analysis
+  ---
+  duration_ms: 28.471313
+  type: 'test'
+  ...
+# Subtest: US10 administrator can view, disable and delete user accounts
+ok 12 - US10 administrator can view, disable and delete user accounts
+  ---
+  duration_ms: 69.485553
+  type: 'test'
+  ...
+# Subtest: US3-TC01 adds a valid expense with a new expenseId
+ok 13 - US3-TC01 adds a valid expense with a new expenseId
+  ---
+  duration_ms: 4.79472
+  type: 'test'
+  ...
+# Subtest: US3-TC02 rejects an expense with zero or negative amount
+ok 14 - US3-TC02 rejects an expense with zero or negative amount
+  ---
+  duration_ms: 0.808548
+  type: 'test'
+  ...
+# Subtest: US3-TC03 rejects an expense with missing required fields
+ok 15 - US3-TC03 rejects an expense with missing required fields
+  ---
+  duration_ms: 0.500958
+  type: 'test'
+  ...
+# Subtest: US4-TC01 edits an existing expense record
+ok 16 - US4-TC01 edits an existing expense record
+  ---
+  duration_ms: 0.436794
+  type: 'test'
+  ...
+# Subtest: US4-TC02 deletes an existing expense record
+ok 17 - US4-TC02 deletes an existing expense record
+  ---
+  duration_ms: 0.305563
+  type: 'test'
+  ...
+# Subtest: US4-TC03 shows an error when editing or deleting a missing record
+ok 18 - US4-TC03 shows an error when editing or deleting a missing record
+  ---
+  duration_ms: 0.353319
+  type: 'test'
+  ...
+# Subtest: US5-TC01 filters expenses by category
+ok 19 - US5-TC01 filters expenses by category
+  ---
+  duration_ms: 0.290894
+  type: 'test'
+  ...
+# Subtest: US5-TC02 summarizes total spending by category
+ok 20 - US5-TC02 summarizes total spending by category
+  ---
+  duration_ms: 0.266848
+  type: 'test'
+  ...
+# Subtest: US5-TC03 rejects an expense with an invalid category
+ok 21 - US5-TC03 rejects an expense with an invalid category
+  ---
+  duration_ms: 0.746975
+  type: 'test'
+  ...
+# Subtest: US6-TC01 creates a valid monthly budget
+ok 22 - US6-TC01 creates a valid monthly budget
+  ---
+  duration_ms: 0.785158
+  type: 'test'
+  ...
+# Subtest: US6-TC02 rejects invalid monthly budget values
+ok 23 - US6-TC02 rejects invalid monthly budget values
+  ---
+  duration_ms: 0.884886
+  type: 'test'
+  ...
+# Subtest: US6-TC03 calculates monthly spending for the selected month only
+ok 24 - US6-TC03 calculates monthly spending for the selected month only
+  ---
+  duration_ms: 0.725157
+  type: 'test'
+  ...
+# Subtest: US7-TC01 returns safe status when spending is below 80 percent of budget
+ok 25 - US7-TC01 returns safe status when spending is below 80 percent of budget
+  ---
+  duration_ms: 0.316722
+  type: 'test'
+  ...
+# Subtest: US7-TC02 returns warning status when spending reaches at least 80 percent of budget
+ok 26 - US7-TC02 returns warning status when spending reaches at least 80 percent of budget
+  ---
+  duration_ms: 0.224088
+  type: 'test'
+  ...
+# Subtest: US7-TC03 returns over-budget status when spending exceeds budget limit
+ok 27 - US7-TC03 returns over-budget status when spending exceeds budget limit
+  ---
+  duration_ms: 0.188843
+  type: 'test'
+  ...
+# Subtest: US7-TC01 shows safe budget status when spending is below the warning threshold
+ok 28 - US7-TC01 shows safe budget status when spending is below the warning threshold
+  ---
+  duration_ms: 2.755726
+  type: 'test'
+  ...
+# Subtest: US7-TC02 shows warning budget status when spending reaches 80 percent of the limit
+ok 29 - US7-TC02 shows warning budget status when spending reaches 80 percent of the limit
+  ---
+  duration_ms: 0.413288
+  type: 'test'
+  ...
+# Subtest: US7-TC03 shows over-budget status when spending exceeds the monthly limit
+ok 30 - US7-TC03 shows over-budget status when spending exceeds the monthly limit
+  ---
+  duration_ms: 0.333928
+  type: 'test'
+  ...
+# Subtest: US8-TC01 generates a monthly report for the selected month only
+ok 31 - US8-TC01 generates a monthly report for the selected month only
+  ---
+  duration_ms: 0.640584
+  type: 'test'
+  ...
+# Subtest: US8-TC02 calculates spending totals by category in the monthly report
+ok 32 - US8-TC02 calculates spending totals by category in the monthly report
+  ---
+  duration_ms: 0.603142
+  type: 'test'
+  ...
+# Subtest: US8-TC03 identifies the highest spending category in the monthly report
+ok 33 - US8-TC03 identifies the highest spending category in the monthly report
+  ---
+  duration_ms: 0.319799
+  type: 'test'
+  ...
+# Subtest: US9-TC01 detects an increasing spending trend
+ok 34 - US9-TC01 detects an increasing spending trend
+  ---
+  duration_ms: 15.143215
+  type: 'test'
+  ...
+# Subtest: US9-TC02 detects a decreasing spending trend
+ok 35 - US9-TC02 detects a decreasing spending trend
+  ---
+  duration_ms: 0.330284
+  type: 'test'
+  ...
+# Subtest: US9-TC03 handles insufficient spending trend data
+ok 36 - US9-TC03 handles insufficient spending trend data
+  ---
+  duration_ms: 0.817114
+  type: 'test'
+  ...
+# Subtest: US10-TC01 logs in successfully with a mock authentication repository
+ok 37 - US10-TC01 logs in successfully with a mock authentication repository
+  ---
+  duration_ms: 1.559729
+  type: 'test'
+  ...
+# Subtest: US10-TC02 rejects an incorrect password using a mock authentication repository
+ok 38 - US10-TC02 rejects an incorrect password using a mock authentication repository
+  ---
+  duration_ms: 1.467309
+  type: 'test'
+  ...
+# Subtest: US10-TC03 validates login input before calling the authentication repository
+ok 39 - US10-TC03 validates login input before calling the authentication repository
+  ---
+  duration_ms: 0.38108
+  type: 'test'
+  ...
+# Subtest: US9-TC04 sorts unordered month totals before trend comparison (BUG-003 regression)
+ok 40 - US9-TC04 sorts unordered month totals before trend comparison (BUG-003 regression)
+  ---
+  duration_ms: 0.206511
+  type: 'test'
+  ...
+1..40
+# tests 40
+# suites 0
+# pass 40
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 912.574877

@@ -1,0 +1,21 @@
+name: User story task
+description: Track an implementation or testing task
+title: "[TASK] "
+labels: ["todo"]
+body:
+  - type: input
+    id: user_story
+    attributes: { label: User story ID, placeholder: US7 }
+    validations: { required: true }
+  - type: textarea
+    id: work
+    attributes: { label: Work to complete }
+    validations: { required: true }
+  - type: input
+    id: estimate
+    attributes: { label: Estimate, placeholder: 1 person-day }
+    validations: { required: true }
+  - type: textarea
+    id: acceptance
+    attributes: { label: Acceptance criteria }
+    validations: { required: true }

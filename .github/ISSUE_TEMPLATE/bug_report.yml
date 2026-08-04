@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible defect found during testing
+title: "[BUG] "
+labels: ["bug", "todo"]
+body:
+  - type: dropdown
+    id: user_story
+    attributes:
+      label: Related user story
+      options: [US1, US2, US3, US4, US5, US6, US7, US8, US9, US10]
+    validations: { required: true }
+  - type: textarea
+    id: description
+    attributes: { label: Description, description: Explain the defect clearly. }
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes: { label: Steps to reproduce, placeholder: "1. Login\n2. ..." }
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: Expected result }
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes: { label: Actual result }
+    validations: { required: true }
+  - type: dropdown
+    id: severity
+    attributes: { label: Severity, options: [low, medium, high, critical] }
+    validations: { required: true }

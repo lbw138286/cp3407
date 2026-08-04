@@ -1,0 +1,12 @@
+erDiagram
+  USERS ||--o{ SESSIONS : has
+  USERS ||--o{ EXPENSES : owns
+  USERS ||--o{ MONTHLY_BUDGETS : sets
+  CATEGORIES ||--o{ EXPENSES : classifies
+  USERS { int user_id PK string name string email UK string password_hash string password_salt string role string status }
+  SESSIONS { string token_hash PK int user_id FK datetime expires_at }
+  CATEGORIES { int category_id PK string name UK }
+  EXPENSES { int expense_id PK int user_id FK string title int amount_cents string category FK date expense_date }
+  MONTHLY_BUDGETS { int budget_id PK int user_id FK string month int limit_cents }
+  ACCEPTANCE_FEEDBACK { int feedback_id PK int iteration string reviewer string outcome string comments }
+  BUGS { int bug_id PK string external_id UK string linked_user_story string title string severity string status }

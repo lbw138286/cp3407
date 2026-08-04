@@ -1,0 +1,15 @@
+{
+  "name": "cp3407-smart-expense-tracker-complete",
+  "version": "2.0.0",
+  "description": "CP3407 final Smart Expense Tracker with a relational SQLite database, secure authentication, admin management, tests and documentation",
+  "type": "module",
+  "engines": { "node": ">=22.5.0" },
+  "scripts": {
+    "start": "node --no-warnings server/server.js",
+    "dev": "node --no-warnings --watch server/server.js",
+    "test": "node --no-warnings --test tests/*.test.js",
+    "init-db": "node --no-warnings server/init-db.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

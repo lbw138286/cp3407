@@ -1,0 +1,12 @@
+* 19488fd (HEAD -> master, tag: v2.1-complete) test: reverify 40 tests after documentation cleanup
+* 0749ac7 docs: remove conflicting legacy statuses and finalize project pages
+* 6718c7b docs: update final history after test verification
+* f07ce4e test: record final 40-test passing output
+* cd0544b docs: refresh git history evidence
+* 808da12 chore: add final demo launch scripts and environment template
+* 00a57a1 docs: record final git history evidence
+* 50cf6bf docs: finalize report, diagrams and verified test evidence
+* 9fc785a (tag: v2.0-final) chore: add CI, issue forms, project evidence and final documentation
+* 51c81e6 test: add API integration tests and close trend sorting defect
+* 0ad5ace feat: add SQLite backend, secure authentication and admin management
+* 4d09780 docs: consolidate requirements, design and final scope

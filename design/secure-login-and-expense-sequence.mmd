@@ -1,0 +1,19 @@
+sequenceDiagram
+  actor User
+  participant UI as Web UI
+  participant API as Node.js API
+  participant Auth as Auth Service
+  participant DB as SQLite Database
+  User->>UI: Enter credentials
+  UI->>API: POST /api/auth/login
+  API->>DB: Find active user by email
+  DB-->>API: User + salted hash
+  API->>Auth: verifyPassword()
+  Auth-->>API: valid
+  API->>DB: Store hashed session token
+  API-->>UI: Token + public user data
+  User->>UI: Add expense
+  UI->>API: POST /api/expenses (Bearer token)
+  API->>DB: Validate session and insert expense
+  DB-->>API: New expense record
+  API-->>UI: Updated record
