@@ -6,7 +6,7 @@
 | Design | architecture/class, sequence, ER, UI prototype; editable online-editor sources | Complete in package |
 | Implementation | database-backed Node.js application and full UI | Complete |
 | Test | 41 automated tests plus final system test record | Complete |
-| Version control | Git repository, CI workflow, issue forms, PR template | Complete locally; live remote evidence requires push |
+| Version control | Live GitHub repository, Issues, Pull Requests, teammate reviews and CI checks | Complete |
 | Building/tools | Node.js 22, SQLite, Docker, GitHub Actions | Complete |
 | Agile | three iterations, velocity, burndown, boards, reflections, bugs | Complete |
 | Technical writing | report, user-story pages, design/testing/tool documentation | Complete |
