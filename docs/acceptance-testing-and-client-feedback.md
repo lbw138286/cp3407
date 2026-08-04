@@ -42,3 +42,17 @@ SQLite-02-server-restarted.png and SQLite-03-data-after-restart.png
 - Actions taken: The lecturer feedback was recorded and the data-presentation usability issue was documented.
 - Planned improvement: Replace or supplement the raw JSON output with clearer summary cards, formatted tables and spending-trend charts. Currency values and trend directions should be displayed using simple and readable labels.
 - Evidence: `docs/evidence/Acceptance-Iteration3-Lecturer-Feedback.png`
+
+### Actions Taken
+
+The report and spending trend interface was redesigned in response to the
+lecturer's usability feedback. Raw JSON is no longer used as the primary
+presentation method. The application now presents monthly spending through
+summary cards, formatted expense tables, category progress bars and readable
+monthly comparison charts. Raw JSON remains available only as optional
+technical evidence.
+
+### Result
+
+The lecturer's feedback about complex data presentation has been addressed
+in the final implementation.
