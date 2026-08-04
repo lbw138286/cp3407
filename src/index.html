@@ -1,18 +1,168 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Smart Expense Tracker</title><link rel="stylesheet" href="style.css"></head>
-<body><main class="container">
-<header class="hero"><div><p class="eyebrow">CP3407 FINAL PROJECT</p><h1>Smart Expense Tracker</h1><p>Secure account access, relational database persistence, expense management, budgets, alerts, reports, trend analysis and administrator controls.</p></div><div class="status" id="healthStatus">Checking server...</div></header>
-<section class="grid two auth-zone">
-  <section class="card"><h2>Register</h2><form id="registerForm"><label>Name<input id="registerName" required minlength="2"></label><label>Email<input id="registerEmail" type="email" required></label><label>Password<input id="registerPassword" type="password" required minlength="8" placeholder="8+ chars, upper/lower/number"></label><button>Create account</button></form><p id="registerMessage" class="message"></p></section>
-  <section class="card"><h2>Login</h2><form id="loginForm"><label>Email<input id="loginEmail" type="email" required></label><label>Password<input id="loginPassword" type="password" required></label><button>Login</button></form><p id="loginMessage" class="message"></p><p class="hint">Demo admin: admin@example.com / Admin123!</p></section>
-</section>
-<section class="card session"><div><h2>Current Session</h2><p id="currentUser">No user logged in.</p></div><button id="logoutBtn" class="secondary">Logout</button></section>
-<section class="card app-only"><h2>Add / Edit Expense</h2><form id="expenseForm" class="wide-form"><input id="expenseId" type="hidden"><label>Title<input id="title" required></label><label>Amount<input id="amount" type="number" step="0.01" min="0.01" required></label><label>Category<select id="category" required><option value="">Select category</option><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Business</option><option>Education</option><option>Other</option></select></label><label>Date<input id="date" type="date" required></label><button id="submitExpenseBtn">Add Expense</button><button type="button" id="cancelEditBtn" class="secondary">Cancel</button></form><p id="expenseMessage" class="message"></p></section>
-<section class="grid two app-only">
-  <section class="card"><h2>Monthly Budget</h2><label>Month<input id="budgetMonth" type="month"></label><label>Limit<input id="budgetLimit" type="number" step="0.01" min="0.01"></label><button id="setBudgetBtn">Set / Update Budget</button><p id="budgetStatus" class="message"></p></section>
-  <section class="card"><h2>Reports and Trends</h2><label>Report month<input id="reportMonth" type="month"></label><div class="button-row"><button id="generateReportBtn">Monthly Report</button><button id="analyzeTrendBtn">Spending Trend</button></div><pre id="reportOutput">Select an action.</pre></section>
-</section>
-<section class="card app-only"><div class="section-head"><h2>Expense Records</h2><label>Filter<select id="categoryFilter"><option value="">All categories</option><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Business</option><option>Education</option><option>Other</option></select></label></div><div class="table-wrap"><table><thead><tr><th>Title</th><th>Amount</th><th>Category</th><th>Date</th><th>Actions</th></tr></thead><tbody id="expenseTableBody"></tbody></table></div></section>
-<section class="card admin-only"><div class="section-head"><div><h2>Administrator - User Management</h2><p>Change roles, disable accounts, or delete users. The active administrator cannot modify or delete itself.</p></div><button id="refreshUsersBtn" class="secondary">Refresh</button></div><div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead><tbody id="userTableBody"></tbody></table></div><p id="adminMessage" class="message"></p></section>
-<section class="card admin-only"><h2>Acceptance Feedback Record</h2><form id="feedbackForm" class="wide-form"><label>Iteration<select id="feedbackIteration"><option>1</option><option>2</option><option>3</option></select></label><label>Reviewer<input id="feedbackReviewer" required></label><label>Outcome<select id="feedbackOutcome"><option value="accepted">Accepted</option><option value="accepted_with_changes">Accepted with changes</option><option value="rejected">Rejected</option></select></label><label class="span-two">Comments<textarea id="feedbackComments" required></textarea></label><button>Save Feedback</button></form><p id="feedbackMessage" class="message"></p></section>
-<footer><p>Data is stored in a relational SQLite database through a Node.js API. Passwords are salted and hashed; raw passwords are not stored.</p></footer>
-</main><script type="module" src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">CP3407 FINAL PROJECT</p>
+      <h1>Smart Expense Tracker</h1>
+      <p>Secure account access, relational database persistence, expense management, budgets, alerts, reports, trend analysis and administrator controls.</p>
+    </div>
+    <div class="status" id="healthStatus">Checking server...</div>
+  </header>
+
+  <section class="grid two auth-zone">
+    <section class="card">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <label>Name<input id="registerName" required minlength="2"></label>
+        <label>Email<input id="registerEmail" type="email" required></label>
+        <label>Password<input id="registerPassword" type="password" required minlength="8" placeholder="8+ chars, upper/lower/number"></label>
+        <button>Create account</button>
+      </form>
+      <p id="registerMessage" class="message"></p>
+    </section>
+    <section class="card">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label>Email<input id="loginEmail" type="email" required></label>
+        <label>Password<input id="loginPassword" type="password" required></label>
+        <button>Login</button>
+      </form>
+      <p id="loginMessage" class="message"></p>
+      <p class="hint">Demo admin: admin@example.com / Admin123!</p>
+    </section>
+  </section>
+
+  <section class="card session">
+    <div><h2>Current Session</h2><p id="currentUser">No user logged in.</p></div>
+    <button id="logoutBtn" class="secondary">Logout</button>
+  </section>
+
+  <section class="card app-only">
+    <h2>Add / Edit Expense</h2>
+    <form id="expenseForm" class="wide-form">
+      <input id="expenseId" type="hidden">
+      <label>Title<input id="title" required></label>
+      <label>Amount<input id="amount" type="number" step="0.01" min="0.01" required></label>
+      <label>Category<select id="category" required><option value="">Select category</option><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Business</option><option>Education</option><option>Other</option></select></label>
+      <label>Date<input id="date" type="date" required></label>
+      <button id="submitExpenseBtn">Add Expense</button>
+      <button type="button" id="cancelEditBtn" class="secondary">Cancel</button>
+    </form>
+    <p id="expenseMessage" class="message"></p>
+  </section>
+
+  <section class="grid two app-only">
+    <section class="card">
+      <h2>Monthly Budget</h2>
+      <label>Month<input id="budgetMonth" type="month"></label>
+      <label>Limit<input id="budgetLimit" type="number" step="0.01" min="0.01"></label>
+      <button id="setBudgetBtn">Set / Update Budget</button>
+      <p id="budgetStatus" class="message"></p>
+    </section>
+
+    <section class="card report-card">
+      <div class="section-head report-heading">
+        <div>
+          <h2>Reports and Trends</h2>
+          <p class="hint">Clear summaries, tables and visual comparisons for normal users.</p>
+        </div>
+        <label>Report month<input id="reportMonth" type="month"></label>
+      </div>
+      <div class="button-row">
+        <button id="generateReportBtn">Monthly Report</button>
+        <button id="analyzeTrendBtn">Spending Trend</button>
+      </div>
+      <p id="reportMessage" class="message" aria-live="polite"></p>
+
+      <div id="reportEmpty" class="report-empty">
+        Select a month and choose Monthly Report, or choose Spending Trend to compare all available months.
+      </div>
+
+      <section id="monthlyReportPanel" class="report-panel" hidden>
+        <div class="summary-grid">
+          <article class="summary-card"><span>Report Month</span><strong id="summaryMonth">—</strong></article>
+          <article class="summary-card"><span>Total Spent</span><strong id="summaryTotal">—</strong></article>
+          <article class="summary-card"><span>Expense Records</span><strong id="summaryCount">—</strong></article>
+          <article class="summary-card"><span>Top Category</span><strong id="summaryTopCategory">—</strong></article>
+        </div>
+
+        <div class="report-layout">
+          <section class="report-section">
+            <h3>Spending by Category</h3>
+            <div id="categoryBreakdown" class="bar-list"></div>
+          </section>
+          <section class="report-section">
+            <h3>Expenses in Selected Month</h3>
+            <div class="table-wrap">
+              <table class="report-table">
+                <thead><tr><th>Date</th><th>Title</th><th>Category</th><th>Amount</th></tr></thead>
+                <tbody id="monthlyExpenseBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="trendPanel" class="report-panel" hidden>
+        <div class="summary-grid trend-summary">
+          <article class="summary-card"><span>Direction</span><strong id="trendDirection" class="trend-badge">—</strong></article>
+          <article class="summary-card"><span>Overall Change</span><strong id="trendChange">—</strong></article>
+          <article class="summary-card"><span>Period</span><strong id="trendPeriod">—</strong></article>
+          <article class="summary-card"><span>Latest Month</span><strong id="trendLatest">—</strong></article>
+        </div>
+        <p id="trendMessage" class="trend-message"></p>
+        <section class="report-section">
+          <h3>Monthly Spending Comparison</h3>
+          <div id="trendBars" class="bar-list"></div>
+        </section>
+      </section>
+
+      <details id="technicalDetails" class="technical-details" hidden>
+        <summary>Technical JSON details</summary>
+        <pre id="reportOutput"></pre>
+      </details>
+    </section>
+  </section>
+
+  <section class="card app-only">
+    <div class="section-head">
+      <h2>Expense Records</h2>
+      <label>Filter<select id="categoryFilter"><option value="">All categories</option><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Business</option><option>Education</option><option>Other</option></select></label>
+    </div>
+    <div class="table-wrap"><table><thead><tr><th>Title</th><th>Amount</th><th>Category</th><th>Date</th><th>Actions</th></tr></thead><tbody id="expenseTableBody"></tbody></table></div>
+  </section>
+
+  <section class="card admin-only">
+    <div class="section-head">
+      <div><h2>Administrator - User Management</h2><p>Change roles, disable accounts, or delete users. The active administrator cannot modify or delete itself.</p></div>
+      <button id="refreshUsersBtn" class="secondary">Refresh</button>
+    </div>
+    <div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead><tbody id="userTableBody"></tbody></table></div>
+    <p id="adminMessage" class="message"></p>
+  </section>
+
+  <section class="card admin-only">
+    <h2>Acceptance Feedback Record</h2>
+    <form id="feedbackForm" class="wide-form">
+      <label>Iteration<select id="feedbackIteration"><option>1</option><option>2</option><option>3</option></select></label>
+      <label>Reviewer<input id="feedbackReviewer" required></label>
+      <label>Outcome<select id="feedbackOutcome"><option value="accepted">Accepted</option><option value="accepted_with_changes">Accepted with changes</option><option value="rejected">Rejected</option></select></label>
+      <label class="span-two">Comments<textarea id="feedbackComments" required></textarea></label>
+      <button>Save Feedback</button>
+    </form>
+    <p id="feedbackMessage" class="message"></p>
+  </section>
+
+  <footer><p>Data is stored in a relational SQLite database through a Node.js API. Passwords are salted and hashed; raw passwords are not stored.</p></footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
