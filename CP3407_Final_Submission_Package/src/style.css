@@ -1,0 +1,20 @@
+:root { font-family: Arial, Helvetica, sans-serif; color: #222; background: #f4f6f8; }
+body { margin: 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 28px; }
+.hero { background: #1f2937; color: white; padding: 28px; border-radius: 16px; margin-bottom: 20px; }
+.hero h1 { margin: 0 0 10px; }
+.grid.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.card { background: white; border-radius: 14px; padding: 20px; margin-bottom: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+input, select, button { padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; }
+button { background: #2563eb; color: white; border: none; cursor: pointer; }
+button:hover { background: #1d4ed8; }
+#cancelEditBtn, #logoutBtn { background: #64748b; }
+.message { color: #0f766e; font-weight: 600; }
+.hint { color: #64748b; font-size: 13px; }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { border: 1px solid #dbe2ea; padding: 10px; text-align: left; }
+th { background: #e2e8f0; }
+pre { background: #0f172a; color: #e2e8f0; padding: 14px; border-radius: 10px; overflow: auto; }
+.app-only, .admin-only { display: none; }
+@media (max-width: 760px) { .grid.two, form { grid-template-columns: 1fr; } }
