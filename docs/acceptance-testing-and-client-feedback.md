@@ -36,7 +36,7 @@ SQLite-02-server-restarted.png and SQLite-03-data-after-restart.png
 - Date: 4 August 2026
 - Reviewer: Dasheng LIU
 - Features demonstrated: US1-US10
-- Automated test result: 40 passed, 0 failed
+- Automated test result: 41 passed, 0 failed
 - Outcome: [Accepted / Accepted with minor changes / Changes required]
 - Reviewer comments: [Exact feedback received]
 - Actions taken: [Changes completed after the feedback, if any]

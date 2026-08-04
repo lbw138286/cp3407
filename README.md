@@ -17,7 +17,7 @@ Demo administrator: `admin@example.com` / `Admin123!` (change through `ADMIN_PAS
 - Full admin account management: list, role/status update, disable and delete.
 - Expense CRUD, category filter, monthly budgets, alerts, reports and chronologically sorted trends.
 - Acceptance feedback capture.
-- 40 automated tests, final system tests, closed BUG-003.
+- 41 automated tests, final system tests, closed BUG-003.
 - Editable online diagram sources, Dockerfile, CI workflow, issue forms and PR template.
 
 ## Important external actions
